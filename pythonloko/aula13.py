@@ -6,11 +6,11 @@ import json
 from PIL import Image
 import pathlib
 import wget
-import time
 from colorama import Fore
-import 
+from deep_translator import GoogleTranslator
 
 #Variaveis
+tradutor = GoogleTranslator(source="pt",target="en")
 req = None
 apikey = 'be1cb85c'
 tipo = 'movie'
@@ -33,54 +33,61 @@ sair = False
 
 #Enquanto nao sair
 while not sair:
+    try:
+        img = pathlib.Path('Poster.png')
+        img.unlink()
+    except:
+        pass
+
     linha(80)
-    op = input('\nEscreva um nome de um filme (obs:escreva em ingles) ou sair:\n')
+    op_pt = input('\nEscreva um nome de um filme ou sair:\n')
+    op_en = tradutor.translate(op_pt)
     print('')
     linha(80)
     vezes = 0
-    if op.upper() == 'sair':
+    if op_en.upper() == 'sair':
         print('Okay')
         print('Programa Finalizado')
         sair = True
         exit()
     else:
-        resultados = requicicao(op)
+        resultados = requicicao(op_en)
         if resultados['Response'] == 'False':
-            print('Filme Nao Encontrado')
+            print('\nFilme Nao Encontrado\n')
         else:
             b = resultados['Search']
             titulos_achados = {}
             if len(b) > 1:
-                print('\tEcontramos Esses Filmes')
+                print('\n\tEcontramos Esses Filmes')
             elif len(b) == 1:
-                print('\tFoi Encontrado So Esse Filme')
+                print('\n\tFoi Encontrado So Esse Filme')
             for i in b:
                 vezes += 1
                 titulo = i['Title']
                 print(f'{Fore.BLUE}{vezes}-{Fore.RESET} {titulo}')
                 titulos_achados[vezes] = titulo
                 if vezes == len(b):
+                    print('')
                     linha(80)
-                    escolha = input('Escolha Um Deles Para Adquirir Informacoes?\n')
+                    escolha = input('\nEscolha Um Deles Para Adquirir Informacoes?\n')
                     try:
                         num_esc = int(escolha)
                         escolhido = titulos_achados[num_esc]
                         titulo_escolhido = b[num_esc-1]
-                        print(titulo_escolhido['Title'])
-                        print(titulo_escolhido['Year'])
+                        print('')
+                        linha(80)
+                        print('\n\t',titulo_escolhido['Title'])
+                        print('\t',titulo_escolhido['Year'])
                         wget.download(titulo_escolhido['Poster'], 'Poster.png')
-                        op1 = input('\nQuer ver o poster?\n')
+                        op1 = input('\n'+Fore.BLUE+'Deseja ver o poster?\n')
                         try:
                             if op1 == 'sim':
-                                print('Abrindo Poster do filme')
-                                time.sleep(2)
+                                print('Abrindo Poster do filme\n'+Fore.RESET)
                                 img = Image.open('Poster.png')
                                 img.show()
-                                img2 = pathlib.Path('Poster.png')
-                                img2.unlink()
-                                print('Muito obrigado')
-                            elif op == 'nao':
-                                print('Okay')
+                                print('Muito obrigado!\n')
+                            elif op1 == 'nao':
+                                print('Okay\n')
                         except:
                             pass
                     except:
