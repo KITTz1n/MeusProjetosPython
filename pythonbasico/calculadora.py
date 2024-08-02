@@ -5,7 +5,6 @@ print('\n\t\tCalculadora')
 sinal = input('Voce quer fazer uma conta com qual sinal? escreva por extenso: ')
 
 #Funcoes
-
 def soma(numero1,numero2):
     resp = numero1+numero2
     return resp
