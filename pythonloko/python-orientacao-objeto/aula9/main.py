@@ -1,5 +1,5 @@
-from veiculo import Veiculo
-from carro import Carro
+from aula9.veiculo import Veiculo
+from aula9.carro import Carro
 
 caminhao_azul = Veiculo('azul',8,'ford',10,70)
 carro_cinza = Carro('cinza','Ferrari',30,40)

@@ -5,8 +5,8 @@ cada cliente possui nome,cpf,idade
 cada conta possui 1 cliente, saldo, limite, sacar, depositar e consultar saldo
 '''
 
-from cliente import Cliente
-from conta import Conta
+from atividade.cliente import Cliente
+from atividade.conta import Conta
 
 #Linha para decorar
 def linha(tamanho):

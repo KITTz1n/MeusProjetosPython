@@ -1,4 +1,3 @@
-import cliente
 class Conta():
     def __init__(self,numero_conta,cpf_conta,saldo,limite,nome):
         self.numero_conta = numero_conta
