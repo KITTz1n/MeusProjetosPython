@@ -7,8 +7,8 @@ from PIL import Image
 import pathlib
 import wget
 import time
-import colorama
 from colorama import Fore
+import 
 
 #Variaveis
 req = None
@@ -23,8 +23,8 @@ def linha(v):
 def requicicao(titulo):
     try:
         req = requests.get('http://www.omdbapi.com/?apikey='+apikey+'&s='+titulo+'&type='+tipo)
-        a = json.loads(req.text)
-        return a
+        dicionario = json.loads(req.text)
+        return dicionario
     except:
         print('Erro Na Conexao')
         return None
@@ -34,9 +34,7 @@ sair = False
 #Enquanto nao sair
 while not sair:
     linha(80)
-    colorama.init()
     op = input('\nEscreva um nome de um filme (obs:escreva em ingles) ou sair:\n')
-    colorama.deinit()
     print('')
     linha(80)
     vezes = 0
@@ -59,7 +57,7 @@ while not sair:
             for i in b:
                 vezes += 1
                 titulo = i['Title']
-                print(f'{vezes}- {titulo}')
+                print(f'{Fore.BLUE}{vezes}-{Fore.RESET} {titulo}')
                 titulos_achados[vezes] = titulo
                 if vezes == len(b):
                     linha(80)
