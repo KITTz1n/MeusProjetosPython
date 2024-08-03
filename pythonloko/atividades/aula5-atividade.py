@@ -14,7 +14,7 @@ contador = 0
 print('\nOkay, Escreva quem sera convidado\n')
 while quant_conv > 0:
     nomes = input('Digite um nome:')
-    lista_conv_nomes.insert(0,nomes)
+    lista_conv_nomes.append(nomes)
     quant_conv -= 1
     contador +=1
 

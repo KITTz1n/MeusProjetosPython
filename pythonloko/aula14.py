@@ -10,7 +10,7 @@ email@dominio.com.br
 texto = 'os gatos sao bonitos'
 texto2 = 'o gato, a gata, os gatinhos'
 texto3 = 'o gato, a gata, os gatinhos, as gat'
-lista_gmail = ['asasasa@gmail.com','abababab@gmail.com','bebebebbe@gmail.com']
+lista_gmail = ['asasasa@gmail.com','abababab@gmail.com','bebebebbe@gmail.com','']
 
 padrao = re.search(r'gat\w',texto) #Raw string
 #Econtra uma palavra de um frase comparando com o valor que vc inseriu em sua funcao
