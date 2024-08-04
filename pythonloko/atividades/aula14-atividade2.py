@@ -4,7 +4,7 @@ faca um programa que mostre em tempo real a previsao do tempo
 
 import json
 import requests
-from colorama import Fore,Style
+from colorama import Fore
 
 apikey = 'bd52c47783991ed037de97c070ea65e8'
 lang = 'pt_br'

@@ -1,6 +1,6 @@
 #strings e listas
 
-frase = 'Eu Amo a Lara!'
+frase = 'Eu gosto de jogos!'
 lista = ['Abacaxi','Alface','Batata','Beterraba']
 lista.append('Uva')
 lista.remove('Beterraba')
@@ -9,7 +9,7 @@ lista.insert(1,'Amora')
 lista[0]= 'Couve Flor'
 contador_Amora = lista.count('Amora')
 frase_separada = frase.split(' ')#separa a frase, catando de espaco em espaco
-frase_nova = frase + ' Ela e meu amor!'
+frase_nova = frase + ' para passar tempo!'
 
 print(frase_separada[0])#imprime a frase separadamente
 print(frase.lower())#deixa a frase em minusculo nessa linha

@@ -26,12 +26,12 @@ if 'Wellington' in dicionario.values(): #procura se wellington esta dentro do di
 for valores in dicionario.values(): #mostra os valores das chaves no dicionario
     print(valores)
 
-dicionario['nome'] = 'Lara' #posso modificar os valores
-dicionario['idade'] = '16 anos'
+dicionario['nome'] = 'Wendel' #posso modificar os valores
+dicionario['idade'] = '20 anos'
 print(dicionario['nome'])
 print(dicionario['idade'])
 
-dicionario['data de nascimento'] = '31/05/2008' #posso adicionar chaves e valores
+dicionario['data de nascimento'] = '20/12/2003' #posso adicionar chaves e valores
 print(dicionario['data de nascimento'])
 
 print('\n\tConjunto')
