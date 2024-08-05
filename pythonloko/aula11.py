@@ -13,9 +13,10 @@ except Exception as erro:
 
 def abrir_arquivo():
     try:
-        arquivo = open('arquivo.txt')
+        arquivo = open('C:\\Users\\Wendel\\Documents\\GitHub\\TreinoPython\\pythonloko\\arquivo.txt')
         for i in arquivo:
-            print(i)
+            if i != ' ':
+                print(i)
     except Exception as erro:
         print('Nao achamos o arquivo, Erro:',erro)
 
