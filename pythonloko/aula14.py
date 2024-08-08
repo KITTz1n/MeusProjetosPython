@@ -10,7 +10,7 @@ email@dominio.com.br
 texto = 'os gatos sao bonitos'
 texto2 = 'o gato, a gata, os gatinhos'
 texto3 = 'o gato, a gata, os gatinhos, as gat'
-lista_gmail = ['asasasa@gmail.com','abababab@gmail.com','bebebebbe@gmail.com','']
+lista_gmail = [' ']
 
 padrao = re.search(r'gat\w',texto) #Raw string
 #Econtra uma palavra de um frase comparando com o valor que vc inseriu em sua funcao
@@ -19,7 +19,7 @@ padrao2 = re.findall(r'gat\w+',texto2)#combinando o 'W'e o'+' ele achara palavra
 padrao3 = re.findall(r'gat\w*',texto3)#combinando o 'W'e o'*' ele achara palavras
 # que nesse caso comecar com gat ou seja apenas gat, exemplo: gat e gatoes
 
-padrao_gmail = re.findall(r'[\w\.-]+@+[\w-]+\.[\w+\.]+',lista_gmail[0])
+padrao_gmail = re.findall(r'[\w\.-]+@+[\w-]+\.[\w+\.]+',lista_gmail)
 
 if padrao:
     print(padrao.group())

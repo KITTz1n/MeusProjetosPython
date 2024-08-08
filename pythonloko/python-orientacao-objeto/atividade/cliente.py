@@ -4,4 +4,4 @@ class Cliente:
         self.nome = nome
         self.cpf = cpf
         self.idade = idade
-        print('Muito obrigado Cliente Foi Registrado com sucesso')
+        print(f'\nMuito obrigado Sr.{nome} seu cliente foi\nregistrado com sucesso\n')
