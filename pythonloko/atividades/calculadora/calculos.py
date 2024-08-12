@@ -1,23 +1,44 @@
-class Calculos:
+from colorama import Fore#serve para colorir algumas strings
+
+class Calculos:#classe chamada Calculos
     
-    def __init__(self):
+    def __init__(self):#funcao init para quando chamar
         pass
 
-    def pergunta1():
-        num1 = float(input('\tEscreva algum numero: '))
-        return num1
-    def pergunta2():
-        num2 = float(input('\tEscreva outro numero: '))
-        return num2
+    def pergunta():
+        try:
+            num = float(input('\tEscreva algum numero: '))
+            return num
+        except:
+            pass
+
     def soma(v1,v2):
-        resp = v1+v2
-        return resp
+        try:
+            resp = v1+v2
+            return resp
+        except:
+            return '0'
+        
     def subtracao(v1,v2):
-        resp = v1-v2
-        return resp
+        try:
+            resp = v1-v2
+            return resp
+        except:
+            return '0'
+        
     def multiplicacao(v1,v2):
-        resp = v1*v2
-        return resp
+        try:
+            resp = v1*v2
+            return resp
+        except:
+            return '0'
+        
     def divisao(v1,v2):
-        resp = v1/v2
-        return resp
+        try:
+            resp = v1/v2
+            return resp
+        except ZeroDivisionError:
+            print(f'\n\t{Fore.BLUE}Opss erro! Divisao por 0{Fore.RESET}')
+            return '0'
+        except:
+            return 'Error!'

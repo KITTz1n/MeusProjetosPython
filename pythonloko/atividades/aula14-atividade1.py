@@ -13,4 +13,4 @@ eur = cot.euro(dic)
 btc = cot.bitcoin(dic)
 
 while True:
-    cot.printar(linha,dlr[0],dlr[1],dlr[2],eur[0],eur[1],eur[2],btc[0],btc[1],btc[2])
+    cot.printar(linha,dlr[0],dlr[2],eur[0],eur[2],btc[0],btc[2])

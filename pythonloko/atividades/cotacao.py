@@ -1,9 +1,10 @@
+#Bibliotecas necessarias
+
 import json
 import requests
-from colorama import Fore
+from colorama import Fore,Style
 
 #Biblioteca
-
 class Cotacao:
 
     def __init__(self):
@@ -35,30 +36,41 @@ class Cotacao:
         self.data_btc = self.resp3['create_date']
         lista_btc = [self.btc_real_compra, self.btc_real_venda, self.data_btc]
         return lista_btc
-    def printar(self,linha,dlr_c,dlr_v,dlr_d,eur_c,eur_v,eur_d,btc_c,btc_v,btc_d):
+    def printar(self,linha,dlr_c,dlr_d,eur_c,eur_d,btc_c,btc_d):
         print(Fore.BLUE + linha * '-' + Fore.RESET)
-        print('\n\t\t\tKITTcota'
+        print(f'\n\t\t{Style.BRIGHT+Fore.BLUE}KITTcota\n{Style.NORMAL+Fore.RESET}'
               '\nSomos um programa de cotacoes onde temos a cotacao\n'
               'do dolar,euro e bitcoin para real.\n')
         print(Fore.BLUE + linha * '-' + Fore.RESET)
-        print('\n1- Dolar  3- Bitcoin\n2- Euro   4- Sair\n')
+        print(f'\n\t{Fore.BLUE}1-{Fore.RESET} Dolar  {Fore.BLUE}3-{Fore.RESET} Bitcoin\n\t{Fore.BLUE}2-{Fore.RESET} Euro   {Fore.BLUE}4-{Fore.RESET} Sair\n')
         print(Fore.BLUE + linha * '-' + Fore.RESET)
+        print(f'\n\t\t{Style.BRIGHT+Fore.BLUE}Informacoes{Style.NORMAL+Fore.RESET}')
         op = input('\nEscolha uma das opcoes:\n')
+        try:
+            if int(op) < 4:
+                quantia = float(input('\nQual a quantia:\n'))
+        except:
+            op = 'Error'
         print('')
         print(Fore.BLUE + linha * '-' + Fore.RESET)
         if op == '1':
-            print('\n\t\t\t\033[1mDolar\033[0m')
-            print(f'\nValor em dolar: U$1.00\nValor em reais de compra: R${dlr_c:.2f}'
-                  f'\nValor em reais de venda: R${dlr_v:.2f}\nData: {dlr_d}\n')
+            valor_c = dlr_c*quantia
+            print(f'\n\t\t{Style.BRIGHT+Fore.BLUE}Dolar{Style.NORMAL+Fore.RESET}')
+            print(f'\n{Fore.BLUE}Valor em dolar:{Fore.RESET} U${quantia}\n{Fore.BLUE}Valor em reais:{Fore.RESET} R${valor_c:.2f}'
+                  f'\n{Fore.BLUE}Valor do dolar:{Fore.RESET} R${dlr_c:.2f}\n{Fore.BLUE}Data:{Fore.RESET} {dlr_d}\n')
         elif op == '2':
-            print(f'\nValor em Euro: €1.00\nValor em reais de compra: R${eur_c:.2f}'
-                  f'\nValor em reais de venda: R${eur_v:.2f}\nData: {eur_d}\n')
+            valor_c = eur_c*quantia
+            print(f'\n\t\t{Style.BRIGHT+Fore.BLUE}Euro{Style.NORMAL+Fore.RESET}')
+            print(f'\n{Fore.BLUE}Valor em euro:{Fore.RESET} €{quantia}\n{Fore.BLUE}Valor em reais:{Fore.RESET} R${valor_c:.2f}'
+                  f'\n{Fore.BLUE}Valor do euro:{Fore.RESET} R${eur_c:.2f}\n{Fore.BLUE}Data:{Fore.RESET} {eur_d}\n')
         elif op == '3':
-            print(f'\nValor em Bitcoin: ₿1.00\nValor em reais de compra: R${btc_c:.2f}'
-                  f'\nValor em reais de venda: R${btc_v:.2f}\nData: {btc_d}\n')
+            valor_c = btc_c*quantia 
+            print(f'\n\t\t{Style.BRIGHT+Fore.BLUE}Bitcoin{Style.NORMAL+Fore.RESET}')
+            print(f'\n{Fore.BLUE}Valor em bitcoin:{Fore.RESET} ₿{quantia}\n{Fore.BLUE}Valor em reais:{Fore.RESET} R${valor_c:.2f}'
+                  f'\n{Fore.BLUE}Valor do bitcoin:{Fore.RESET} R${btc_c:.2f}\n{Fore.BLUE}Data:{Fore.RESET} {btc_d}\n')
         elif op == '4':
-            print('\nOkay!')
+            print('\nOkay!\n')
             print(Fore.BLUE + linha * '-' + Fore.RESET)
             exit()
         else:
-            print('Nao achamos essa opcao, Tente novamente!')
+            print('\nNao achamos essa opcao, Tente novamente!\n')
