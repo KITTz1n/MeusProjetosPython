@@ -6,18 +6,23 @@ while True:
     var = []
     linhas(50)
     digite = input('\ndigite uma conta de segundo grau: ')
+    teste = digite.split(' ')
+    print(teste)
+    print(digite.split('x'))
     print('')
     linhas(50)
     if digite == 'sair':
         print('Programa finalizado')
         exit()
-    for i in digite:
+    for i in digite.split('x'):
         try:
+            print(var)
             int(i)
-            if sinal == 'menos':
-                var.append(int(i)*-1)
-            if sinal != 'menos':
-                var.append(int(i))
+            var.append(int(i))
+            #if sinal == 'menos':
+            #    var.append(int(i)*-1)
+            #if sinal != 'menos':
+            #    var.append(int(i))
         except:
             if i == '-':
                 sinal = 'menos'
@@ -41,7 +46,7 @@ while True:
     x2 = -(b) - part3
     respX2 = x2/part4
 
-    print(f'\n\t{digite}')
+    print(f'\n\t{digitze}')
     print(f'\nA: {a}\nB: {b}\nC: {c}\n')
     print(f'Delta: {delta}')
     print(f'x1 ≃ {respX1:.1f}')
