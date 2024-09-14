@@ -1,4 +1,4 @@
-from aula9.veiculo import Veiculo
+from veiculo import Veiculo
 
 class Carro(Veiculo):
 

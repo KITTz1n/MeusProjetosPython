@@ -1,5 +1,5 @@
-from aula9.veiculo import Veiculo
-from aula9.carro import Carro
+from veiculo import Veiculo
+from carro import Carro
 
 caminhao_azul = Veiculo('azul',8,'ford',10,70)
 carro_cinza = Carro('cinza','Ferrari',30,40)
@@ -67,6 +67,4 @@ def fazer():
             print('ERRO! nao temos essa opcao')
       if (oq_fazer == 'ver combustivel' or oq_fazer == 'andar') or (oq_fazer == 'abastecer'):
             fazer()
-
-
 fazer()
