@@ -34,7 +34,7 @@ print('\n1-Abastecer\n2-Andar\n3-Nada')
 def fazer():
       oq_fazer = input('\nOque ira fazer?\n')
 
-      if oq_fazer == 'abastecer':
+      if oq_fazer == '1':
             quant_abastecer = float(input('Qual a quantidade de litros?\n'))
             if escolha == 'carro':
                   carro_cinza.abastecer(quant_abastecer)
@@ -44,13 +44,13 @@ def fazer():
                   caminhao_azul.abastecer(quant_abastecer)
                   print('Quantidade de Litros Atual:',caminhao_azul.tanque)
                   print('Quantia que excedeu:',caminhao_azul.excedeu)
-      elif oq_fazer == 'andar':
+      elif oq_fazer == '2':
             quant_andar = float(input('Quantos Km ira rodar com o veiculo?: '))
             if escolha == 'carro':
                   carro_cinza.andar(quant_andar,0.1)
                   print('Quantia gasta:',carro_cinza.quant_gasto)
                   print('Quantidade de Litros Atual:',carro_cinza.tanque)
-            if escolha == 'caminhao':
+            if escolha == '3':
                   caminhao_azul.andar(quant_andar,0.15)
                   print('Quantia gasta:',caminhao_azul.quant_gasto)
                   print('Quantidade de Litros Atual:',caminhao_azul.tanque)
