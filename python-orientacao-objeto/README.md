@@ -15,7 +15,7 @@ Meu aprendizado em Orientacao a objeto com python
 
 <li>
 <h3>Atividade</h3>
-Atividade que o professor do curso que fiz passou na aula numero 9
+Atividade que o professor do curso me passou na aula numero 9
 </li>
 
 <li>
