@@ -10,3 +10,5 @@ for i in range(25):
     msg = random.choice(mensagens)
     py.write(msg)
     py.press("enter")
+
+
