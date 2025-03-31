@@ -1,14 +1,14 @@
-# Projetos em python 💻
-<p>
-Alguns projetos meu em python, aqui tem meus primeiros codigos e outros.
-</p>
-<p>
-Linguagem:
-</p>
+# 🐍 Projetos em Python 💻
+
+Este repositório contém meus projetos desenvolvidos em **Python**, incluindo meus primeiros códigos e outros projetos em evolução.
+
+## 🧑‍💻 Linguagem:
 <div style="display: inline_block">
-  <img aling="center" alt="html5" src="https://img.shields.io/badge/PYTHON-0D1117?style=for-the-badge&logo=python&logoColor=3776AB"/>
+  <img align="center" alt="python" src="https://img.shields.io/badge/PYTHON-0D1117?style=for-the-badge&logo=python&logoColor=3776AB"/>
 </div>
-<h2>
-Certificado
-</h2>
-<img src="https://github.com/user-attachments/assets/905d2e08-e3fa-487c-a86b-9621977ed7b0" width="700"/>
+
+## 🎓 Certificado
+
+Aqui está o meu certificado de conclusão de alguns cursos de Python:
+
+![Certificado](https://github.com/user-attachments/assets/905d2e08-e3fa-487c-a86b-9621977ed7b0)
