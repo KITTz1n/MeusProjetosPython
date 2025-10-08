@@ -4,11 +4,9 @@ import time
 
 time.sleep(5)   
 
-mensagens = ["Estudar!","Vamos Estudar!"]
+mensagens = ["vamo querer!","desumilde!"]
 
-for i in range(25):
+for i in range(5):
     msg = random.choice(mensagens)
     py.write(msg)
     py.press("enter")
-
-
